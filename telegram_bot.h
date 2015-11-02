@@ -14,6 +14,8 @@
 class TelegramBot {
 public:
   TelegramBot(std::string token);
+  void Run();
+protected:
   virtual void ProcessMessage(web::json::object message) = 0;
 private:
   void ProcessUpdate(web::json::object update);

@@ -9,5 +9,6 @@
 
 int main(int argc, char** argv) {
   TroutSlapBot bot("abcd");
+  TroutSlapBot.Run();
   return 0;
 }
