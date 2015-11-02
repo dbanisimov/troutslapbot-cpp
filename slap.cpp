@@ -5,8 +5,9 @@
  * 
  */
 
-#include "trout_slap_bot.hpp"
+#include "trout_slap_bot.h"
 
 int main(int argc, char** argv) {
+  TroutSlapBot bot("abcd");
   return 0;
 }
