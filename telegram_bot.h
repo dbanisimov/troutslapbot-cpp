@@ -19,8 +19,10 @@ protected:
   virtual void ProcessMessage(web::json::object message) = 0;
 private:
   void ProcessUpdate(web::json::object update);
+  bool TestMe();
 private:
   const std::string token_;
+  const std::string bot_url_;
 };
 
 #endif	/* TELEGRAM_BOT_HPP */
