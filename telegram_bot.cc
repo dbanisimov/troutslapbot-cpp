@@ -46,14 +46,14 @@ void TelegramBot::Run() {
         ProcessMessage(update.as_object().at("message").as_object());
       }
     } catch (UnsuccessfulRequest &ex) {
-      std::cout << "Cannot get updates. Code: " << ex.status_code_
+      std::cout << "Cannot process updates. Code: " << ex.status_code_
         << " Description: " << ex.description_ << std::endl;
     } catch (std::runtime_error &ex) {
-      std::cout << "Cannot get updates. " << ex.what() << std::endl;
+      std::cout << "Cannot process updates. " << ex.what() << std::endl;
     } catch (web::json::json_exception& ex) {
-      std::cout << "Cannot get updates. Cannot process json: " << ex.what() << std::endl;  
+      std::cout << "Cannot process updates. Cannot process json: " << ex.what() << std::endl;  
     } catch (...) {
-      std::cout << "Cannot get updates. Unknown exception." << std::endl;
+      std::cout << "Cannot process updates. Unknown exception." << std::endl;
     }
     std::this_thread::sleep_for(2s);
   }
