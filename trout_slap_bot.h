@@ -8,6 +8,8 @@
 #ifndef TROUT_SLAP_BOT_H_
 #define	TROUT_SLAP_BOT_H_
 
+#include <cpprest/json.h>
+
 #include "telegram_bot.h"
 
 class TroutSlapBot : public TelegramBot {
