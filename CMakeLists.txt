@@ -14,6 +14,7 @@ set(SOURCES
 
 set(HEADERS
   telegram_bot.h
+  telegram_exceptions.h
   trout_slap_bot.h
 )
 
