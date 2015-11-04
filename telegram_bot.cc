@@ -86,6 +86,14 @@ web::json::value TelegramBot::MakeRequest(std::string query) {
   return response_json.as_object().at("result");
 }
 
+void TelegramBot::SendMessage(int64_t chat_id, std::string text) {
+  MakeRequest(
+    web::http::uri_builder("/sendMessage")
+    .append_query("chat_id", chat_id)
+    .append_query("text", text)
+    .to_string()
+  );
+}
 
 void TelegramBot::TestMe() {
   MakeRequest("/getMe");

@@ -19,6 +19,7 @@ public:
 protected:
   virtual void ProcessMessage(web::json::object message) = 0;
   web::json::value MakeRequest(std::string query);
+  void SendMessage(int64_t chat_id, std::string text);
 private:
   void ProcessUpdate(web::json::object update);
   void TestMe();
