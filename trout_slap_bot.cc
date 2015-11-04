@@ -36,7 +36,12 @@ void TroutSlapBot::ProcessMessage(web::json::object message) {
       username = '@' + username;
     }
   }
-  auto user_from = '@' + message.at("from").at("username").as_string();
+  std::string user_from;
+  if (message.at("from").as_object().find("username") != message.at("from").as_object().end()) {
+    user_from = '@' + message.at("from").at("username").as_string();
+  } else {
+    user_from = message.at("from").at("first_name").as_string();
+  }
   auto msg_text = user_from + " slaps " + username + " around a bit with a large trout";
   SendMessage(chat_id, msg_text);
 }
