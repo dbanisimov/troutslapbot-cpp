@@ -20,6 +20,7 @@ TelegramBot::TelegramBot(std::string token)
 
 void TelegramBot::Run() {
   if (!TestMe()) {
+    std::cout << "Bot self-test using getMe method failed." << std::endl;
     return;
   }
 
