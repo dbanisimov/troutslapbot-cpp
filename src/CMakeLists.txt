@@ -1,5 +1,5 @@
 set(SOURCES
-  slap.cpp
+  slap.cc
   telegram_bot.cc
   trout_slap_bot.cc
 )
