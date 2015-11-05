@@ -11,4 +11,4 @@ set(HEADERS
 )
 
 add_executable(slap ${SOURCES} ${HEADERS})
-target_link_libraries(slap ${CPPREST_LIB})
+target_link_libraries(slap cpprest)
